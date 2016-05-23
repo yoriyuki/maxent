@@ -7,7 +7,7 @@
  * Copyright (C) 2004 by Zhang Le <ejoy@users.sourceforge.net>
  * Begin       : 29-May-2004
  * Last Change : 22-May-2005.
- * 
+ *
  * USEAGE:
  *   if mmap support is identified on the system on which this file is compiled,
  *   a macro HAVE_SYSTEM_MMAP will be defined. Then you can write your mmap
@@ -32,7 +32,7 @@
  *
  *   Currently only mapping with shared reading is implemented. Do not attempt to
  *   write to the mapped address `addr'. The code should work on both unix
- *   platform that supports mmap(2) call or Win32 platform (mingw & cygwin). 
+ *   platform that supports mmap(2) call or Win32 platform (mingw & cygwin).
  *
  *   This file should work out of the box on Linux/FreeBSD/Win32. However on
  *   system unknown to the file, you may want to use autoconf macro
@@ -47,10 +47,10 @@
  * the rights to use, copy, modify, merge, publish, distribute, sublicense,
  * and/or sell copies of the Software, and to permit persons to whom the
  * Software is furnished to do so, subject to the following conditions:
- * 
+ *
  * The above copyright notice and this permission notice shall be included in
  * all copies or substantial portions of the Software.
- * 
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
  * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
@@ -77,6 +77,7 @@
         #define USE_WIN32_MMAP
         #include <windows.h>
     #else
+        #define USE_POSIX_MMAP
         #warning "Unknown platform for mmap wrapper"
     #endif
 #endif
@@ -119,4 +120,3 @@ int mmap_close(mmap_info* info);
 #endif /* ifndef HAVE_SYSTEM_MMAP */
 
 #endif /* ifndef MMAPFILE_H */
-
