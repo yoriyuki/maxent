@@ -64,3 +64,7 @@ More details are covered in the PDF manual.
 Please consult python/README for instruction on building the python extension
 module.
 
+====
+For Mac OS X El Capitan
+ CXX=g++-5 CXXCPP="/usr/bin/cpp" ./configure
+ looks working
