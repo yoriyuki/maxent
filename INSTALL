@@ -66,5 +66,6 @@ module.
 
 ====
 For Mac OS X El Capitan
- CXX=g++-5 CXXCPP="/usr/bin/cpp" ./configure
- looks working
+ xcode-select --install
+ CXX=g++-5 ./configure
+looks working
