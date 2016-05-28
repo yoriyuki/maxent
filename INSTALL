@@ -70,3 +70,5 @@ For Mac OS X El Capitan
  CXX=g++-5 ./configure
 looks working
 Only Pytnon2 works.
+You need(?)
+CC=gcc-5 python setup.py ...
